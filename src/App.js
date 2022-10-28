@@ -1,10 +1,10 @@
 import React from 'react';
 import './App.css';
-import Nav from './Nav';
-import About from './About';
-import MovieList from './MoviesList';
-import Home from './Home';
-import RequestFilm from './RequestFilm';
+import Nav from './Components/Nav';
+import About from './Components/About';
+import MovieList from './Components/MoviesList';
+import Home from './Components/Home';
+import SignUp from './Components/SignUp';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 function App() {
@@ -16,7 +16,7 @@ function App() {
           <Route path="/" exact component={Home} />
           <Route path="/about" component={About} />
           <Route path="/movies" component={MovieList} />
-          <Route path="/request" component={RequestFilm} />
+          <Route path="/signup" component={SignUp} />
         </Switch>
       </div>
     </Router >
