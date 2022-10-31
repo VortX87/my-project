@@ -1,7 +1,7 @@
 const { buildDB } = require('./populateDatabase')
 const express = require('express')
 const { Movie, User } = require('./models')
-// const { usersRouter, moviesRouter } = require('./routes')
+const { usersRouter, moviesRouter } = require('./routes')
 const app = express()
 buildDB()
 
@@ -11,8 +11,8 @@ buildDB()
 // })
 
 app.use(express.json())
-// app.use("/movies", moviesRouter)
-// app.use("/users", usersRouter)
+app.use("/movies", moviesRouter)
+app.use("/users", usersRouter)
 
 
 app.listen(5000, () => {
