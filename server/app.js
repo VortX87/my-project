@@ -3,13 +3,14 @@ const express = require('express')
 const { Movie, User } = require('./models')
 const { usersRouter, moviesRouter } = require('./routes')
 const app = express()
+const cors = require('cors');
 buildDB()
 
 // app.use((req, res, next) => {
 //     console.log(req)
 //     next()
 // })
-
+app.use(cors());
 app.use(express.json())
 app.use("/movies", moviesRouter)
 app.use("/users", usersRouter)

@@ -5,6 +5,7 @@ import About from './Components/About';
 import MovieList from './Components/MoviesList';
 import Home from './Components/Home';
 import SignUp from './Components/SignUp';
+import MovieDetails from './Components/MoviesDetails';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 function App() {
@@ -15,7 +16,8 @@ function App() {
         <Switch>
           <Route path="/" exact component={Home} />
           <Route path="/about" component={About} />
-          <Route path="/movies" component={MovieList} />
+          <Route path="/movies" exact component={MovieList} />
+          <Route path="/movies/:movieid" component={MovieDetails} />
           <Route path="/signup" component={SignUp} />
         </Switch>
       </div>
