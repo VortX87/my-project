@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import '../App.css';
-import { Link } from 'react-router-dom'
+import Card from 'react-bootstrap/Card'
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
+import Container from 'react-bootstrap/Container'
 
 function MovieList() {
 
@@ -19,10 +22,30 @@ function MovieList() {
 
     return (
         <div>
-            {movies.map(movie => (
-                <h1><Link to={movie.movieid}>{movie.title}</Link ></h1>
-            ))
-            }
+            <Container>
+                <Row lg={5}>
+                    {movies.map(movie => {
+                        return (
+                            <Col>
+                                <Card border="info" style={{ height: "40rem" }}>
+                                    <Card.Title>{movie.title}</Card.Title>
+                                    <Card.Img
+                                        src={movie.image}></Card.Img>
+
+                                    <Card.Text>
+                                        <ul>
+                                            {movie.genre}<br></br>
+                                            {movie.releasedate}<br></br>
+                                            {movie.synopsis}
+                                        </ul>
+                                    </Card.Text>
+                                </Card>
+                            </Col>
+                        )
+                    })
+                    }
+                </Row>
+            </Container>
         </div >
     );
 }

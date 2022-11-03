@@ -15,12 +15,13 @@ moviesRouter.get('/allmovies', async (req, res) => {
 moviesRouter.get('/:movieid', async (req, res) => {
     let newString1 = req.params.movieid
     const queriedFilm = await Movie.findOne({ where: { movieid: newString1 } })
-    let { title, genre, releasedate, synopsis } = queriedFilm
+    let { title, genre, releasedate, synopsis, image } = queriedFilm
     let filmdetails = {
         title: title,
         genre: genre,
         releasedate: releasedate,
-        synopsis: synopsis
+        synopsis: synopsis,
+        image: image
     }
     console.log(queriedFilm)
     res.send(filmdetails)

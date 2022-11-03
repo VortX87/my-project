@@ -9,6 +9,7 @@ const Movie = db.define('movie', {
     genre: DataTypes.STRING,
     releasedate: DataTypes.STRING,
     synopsis: DataTypes.STRING,
+    image: DataTypes.STRING
 });
 
 module.exports = { Movie };

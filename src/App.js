@@ -7,6 +7,7 @@ import Home from './Components/Home';
 import SignUp from './Components/SignUp';
 import MovieDetails from './Components/MoviesDetails';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
@@ -17,7 +18,7 @@ function App() {
           <Route path="/" exact component={Home} />
           <Route path="/about" component={About} />
           <Route path="/movies" exact component={MovieList} />
-          <Route path="/movies/:movieid" component={MovieDetails} />
+          {/* <Route path="/movies/:movieid" component={MovieDetails} /> */}
           <Route path="/signup" component={SignUp} />
         </Switch>
       </div>
