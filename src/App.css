@@ -23,8 +23,13 @@ nav {
 }
 
 .form {
-  align-content: center;
   justify-content: space-around;
+  border: 1px;
+  border-style: dotted;
+  height: 200px;
+  width: 500px;
+  margin-left: 35%;
+  margin-top: 3rem
 }
 
 .customCard {
