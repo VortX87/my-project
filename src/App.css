@@ -8,6 +8,9 @@ nav {
   align-items: center;
   min-height: 10vh;
   background: lightblue;
+  align-self: auto;
+  margin-left: 16%;
+  margin-right: 16%
 }
 
 .nav-links {
@@ -16,9 +19,20 @@ nav {
   justify-content: space-around;
   align-items: center;
   list-style: none;
+  color: rgb(81, 144, 165)
 }
 
 .form {
   align-content: center;
   justify-content: space-around;
+}
+
+.customCard {
+  text-align: center;
+  margin-right: 10%
+}
+
+.upperCard {
+  margin-bottom: 0.40rem;
+  background: rgb(235, 235, 235) !important;
 }

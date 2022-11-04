@@ -21,11 +21,7 @@ function SignUp() {
                 <div><input type='text' placeholder='Username' value={userName} onChange={e => setUserName(e.target.value)} /></div>
                 <div><input type='text' placeholder='Password' value={password} onChange={e => setPassword(e.target.value)} /></div>
                 <div><input type='text' placeholder='Email' value={email} onChange={e => setEmail(e.target.value)} /></div>
-                <label>
-                    I confirm that I am over 18 years of age
-                    <input type="checkbox" value={tickedCheckbox} onChange={e => setTickedCheckbox(true)} /><br></br>
-                </label>
-                <button type='submit'>Submit</button>
+                <div><button type='submit'>Submit</button></div>
             </form>
         </div>
 

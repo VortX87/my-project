@@ -23,16 +23,16 @@ function MovieList() {
     return (
         <div>
             <Container>
-                <Row lg={5}>
+                <h1>Please find below the films we currently have in stock</h1>
+                <Row lg={4}>
                     {movies.map(movie => {
                         return (
                             <Col>
-                                <Card border="info" style={{ height: "40rem" }}>
+                                <Card className="upperCard" border="info" style={{ height: "45rem" }}>
                                     <Card.Title>{movie.title}</Card.Title>
                                     <Card.Img
                                         src={movie.image}></Card.Img>
-
-                                    <Card.Text>
+                                    <Card.Text className="customCard">
                                         <ul>
                                             {movie.genre}<br></br>
                                             {movie.releasedate}<br></br>
