@@ -22,10 +22,10 @@ function Home() {
             <h1>Home</h1>
 
             <h2>Welcome to 'The Blackhole' Retro film store</h2>
-            <Carousel>
+            <Carousel fade>
                 {movies.map((movie) =>
-                    <Carousel.Item>
-                        <img className="w-40" src={movie.image} />
+                    <Carousel.Item interval={650}>
+                        <img className="carouselImage" src={movie.image} />
                     </Carousel.Item>
                 )}
             </Carousel>

@@ -32,18 +32,17 @@ function MovieList() {
         );
     }, [search, movies]);
 
+
     return (
         <div>
             <Container>
-                <h1>Please find below the films we currently have in stock</h1>
-
                 <Row className='mb-4'>
                     <Col sm='8' md='6' className='mx-auto'>
-                        <InputGroup>
+                        <InputGroup className="searchBar">
                             <InputGroup.Text id='search'>Search</InputGroup.Text>
                             <FormControl
                                 onChange={(e) => setSearch(e.target.value)}
-                                placeholder="Search for Films"
+                                placeholder="Search for Films by Title"
                             />
                         </InputGroup>
                     </Col>
@@ -54,7 +53,7 @@ function MovieList() {
                             <Col>
                                 <Card className="upperCard" border="info" style={{ height: "45rem" }}>
                                     <Card.Title>{movie.title}</Card.Title>
-                                    <Card.Img
+                                    <Card.Img className='cardImg'
                                         src={movie.image}></Card.Img>
                                     <Card.Text className="customCard">
                                         <ul>
